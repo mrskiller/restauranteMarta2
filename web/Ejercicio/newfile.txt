@@ -1,0 +1,10 @@
+try {
+LibroAR libro = new LibroAR(isbn, titulo, categoria);
+libro.insertar();
+
+//dos excepciones anidadas
+//la nuestra y la original
+} catch (DataBaseException e) {%>
+<%=e.getMessage()%>
+<%=e.getException().getMessage()%>
+<%}%>
